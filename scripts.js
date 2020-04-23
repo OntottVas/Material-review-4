@@ -21,16 +21,32 @@ $('ul').append('<li id="specialListItem">Removable</li>');
 $('#specialListItem').remove();
 
 let addButtonHandler = () => {
+    if ($('li').length < 5) {
     $('ul').append('<li class="removable">My name is ' + name + '</li>');
+}
 };
 
 $('#addButton').click(addButtonHandler);
 
 $('#removeButton').click(() => {
     // $('.removable').remove();
+    if ($('li').length > 1) {
     $('li:last-child').remove();
+}
 });
 
+
+let age = 26;
+
+console.log('Starting the IF here');
+
+if (age < 18) {
+    console.log('Not old enough to drink.');
+} else {
+    console.log('Bottoms UP!');
+}
+
+console.log('This is the after the IF');
 
 
 // This is a JavaScript comment.
